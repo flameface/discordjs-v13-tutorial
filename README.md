@@ -1,4 +1,5 @@
-# DiscordJS-v13 New Episodes By FlameQuard
+<h1 align='center'> DISCORDJS v13 EPISODES BY FLAMEQUARD </h1> 
+
 ![image](https://github.com/FlameQuard/Images/blob/main/20210810_102843.jpg)
 
 ## We Will Teach You
