@@ -13,6 +13,8 @@
 npm init -y && npm i --save-dev node@16 && npm config set prefix=$(pwd)/node_modules/node && export PATH=$(pwd)/node_modules/node/bin:$PATH
 ```
 
+If Facing Problem Join Discord Server For Help And Subscribe To Our Channel
+
 ### 2. Create the .replit file to execute node from the shell instead of the console, and insert this in that file.
 ```
 run="npm start"
