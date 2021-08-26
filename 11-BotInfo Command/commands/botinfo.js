@@ -1,4 +1,4 @@
-//The Command Is So Big So I Could'nt Make Too Big Video 
+//The Command Is So Big So I Could'nt Make Too Big Video But Kindly Watch Vidoe
 
 const { MessageEmbed }= require('discord.js');
 const moment = require('moment');
