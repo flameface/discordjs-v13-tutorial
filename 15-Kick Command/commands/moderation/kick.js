@@ -8,6 +8,7 @@ module.exports = {
         usage: "[name | nickname | mention | ID] <reason> (optional)",
         aliases: ["k"],
         run: async (client, message, args) => {
+        if(!message.content.startsWith(prefix)) return;
         try {
             if (!message.member.permissions.has(Permissions.FLAGS.KICK_MEMBERS)) return message.channel.send("**You Do Not Have Permissions To Kick Members! - [KICK_MEMBERS]**");
             if (!message.guild.me.permissions.has(Permissions.FLAGS.KICK_MEMBERS)) return message.channel.send("**I Do Not Have Permissions To Kick Members! - [KICK_MEMBERS]**");
