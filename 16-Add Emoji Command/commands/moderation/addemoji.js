@@ -10,8 +10,8 @@ module.exports = {
         usage: "<emojiname> <link>",
         accessableby: "Administrator",
         run: async (client, message, args, prefix) => {
-               
-       if (!message.member.permissions.has(Permissions.FLAGS.MANAGE_EMOJIS)) {
+        if(!message.content.startsWith(prefix)) return;       
+        if (!message.member.permissions.has(Permissions.FLAGS.MANAGE_EMOJIS)) {
       return message.channel.send(`**You Don't Have Permission To Use This Command! Manage Emojis**`)
     }
     
