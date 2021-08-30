@@ -1,10 +1,6 @@
 <h1 align='center'> DISCORDJS v13 EPISODES BY FLAMEQUARD </h1> 
 
-## We Will Teach You
-- `DiscordJS Features`
-- `Awesome Commands`
-- `Handlers`
-- `And More`
+# If You Haven't Subscribe Us Please Its Our Request, Subscribe Us
 
 ## DiscordJS v13 Require NodeJS v16 To Install It In Follow The Steps
 
