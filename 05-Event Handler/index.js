@@ -26,7 +26,7 @@ client.commands = new Collection();
 client.aliases = new Collection();
 client.categories = fs.readdirSync("./commands/");
 
-["command"].forEach(handler => {
+["command", "event"].forEach(handler => {
     require(`./handlers/${handler}`)(client);
 });
 
