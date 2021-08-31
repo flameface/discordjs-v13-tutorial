@@ -13,7 +13,7 @@ client.on('messageCreate', async message =>{
     if(!command) command = client.commands.get(client.aliases.get(cmd));
     if (command) {
         if (!message.member.permissions.has(command.UserPerms || [])) return message.channel.send(`User Dont Have \`${command.UserPerms || []}\` Permissions`)
-        if (!message.guild.me.permissions.has(command.clientPerms || [])) return message.channel.send(`Client missing \`${command.ClientPerms || []}\` Permissions`)
+        if (!message.guild.me.permissions.has(command.ClientPerms || [])) return message.channel.send(`Client missing \`${command.ClientPerms || []}\` Permissions`)
 }
     if(command) command.run(client, message, args) 
 })
