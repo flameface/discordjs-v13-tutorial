@@ -1,5 +1,4 @@
 const { MessageEmbed } = require('discord.js');
-const db = require('quick.db');
 
 module.exports = {
         name: "ban",
@@ -25,7 +24,7 @@ module.exports = {
                 message.guild.members.ban(banMember, { days: 7, reason: reason })
             }
             if (reason) {
-            const sembed1 = new MessageEmbed()
+            const sembed = new MessageEmbed()
                 .setColor("GREEN")
                 .setAuthor(message.guild.name, message.guild.iconURL())
                 .setDescription(`**${banMember.user.username}** has been banned for ${reason}`)
