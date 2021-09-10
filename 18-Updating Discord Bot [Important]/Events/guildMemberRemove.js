@@ -5,7 +5,7 @@ client.on('guildMemberRemove', async(member) => {
   const Channel = member.guild.channels.cache.get('channel-id');
   const embed = new MessageEmbed()
   .setColor("GREEN")
-  .setTitle("Member Join")
-  .setDescription(`**${member.displayName}** Joined ${member.guild.name}, We Have Now ${member.guild.memberCount} Members`);
+  .setTitle("Member Leave")
+  .setDescription(`**${member.displayName}** Leave ${member.guild.name}, We Have Now ${member.guild.memberCount} Members`);
   Channel.send({ embeds: [embed] });
 });
