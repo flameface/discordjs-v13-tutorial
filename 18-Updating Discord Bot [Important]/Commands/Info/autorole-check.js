@@ -14,6 +14,15 @@ module.exports = {
         .setDescription(`The autorole is <@&${role}>`)
         .setColor('RED')
         message.reply({ embeds: [embed] });
+        } catch (err) {
+            const errorEmbed = new MessageEmbed()
+            .setTitle("ERROR")
+            .setDescription(`${client.emoji.fail} ${err.message}`)
+            .setColor("RED")
+            .setFooter("message will be deleted after 10 seconds");
+            message.channel.send({embeds: [errorEmbed] }).then(e => {
+                setTimeout(() => e.delete(), 10000);
+            });
         }
     }
 }
