@@ -13,6 +13,15 @@ module.exports = {
     if(newprefix.length > 5) return message.channel.send("Invalid Prefix, Prefix Is Too Long")
     message.channel.send(`New Prefix Set To **${newprefix}**`)
     db.set(`prefix_${message.guild.id}`, newprefix);
+    } catch (err) {
+      const errorEmbed = new MessageEmbed()
+      .setTitle("ERROR")
+      .setDescription(`${client.emoji.fail} ${err.message}`)
+      .setColor("RED")
+      .setFooter("message will be deleted after 10 seconds");
+      message.channel.send({embeds: [errorEmbed] }).then(e => {
+        setTimeout(() => e.delete(), 10000);
+      });
     }
-   }
+  }
 }
