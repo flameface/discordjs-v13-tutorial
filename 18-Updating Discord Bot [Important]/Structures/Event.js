@@ -12,5 +12,5 @@ module.exports = (client) => {
       }
     }
   });
-  client.logger.log("=-=-=-=-=-=-=- Event(s) Loaded -=-=-=-=-=-=-=");
+  client.logger.log("=-=-=-=-=-=-=- Loading event(s) -=-=-=-=-=-=-=");
 };
