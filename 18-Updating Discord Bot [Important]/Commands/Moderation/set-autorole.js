@@ -3,8 +3,8 @@ const db = require('quick.db');
 const { error } = require("../../Utils");
 
 module.exports = {
-  name : "autorole",
-  aliases: ["ar"],
+  name : "set-autorole",
+  aliases: ["sar"],
   description: "set autorole for guild",
   userPerms: ["MANAGE_ROLES"],
   clientPerms: ["MANAGE_ROLES"],
