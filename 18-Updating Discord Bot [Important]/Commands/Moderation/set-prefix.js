@@ -2,7 +2,9 @@ const {discord, Permissions} = require('discord.js')
 const db = require('quick.db')
 
 module.exports = {
-    name: 'setprefix',
+    name: 'set-prefix',
+    aliases: ["sp"],
+    description: "set prefix as per server",
     UserPerms: ["ADMINISTRATOR"],
     ClientPerms: ["ADMINISTRATOR"],
     run: async (client, message, args, prefix) => {
