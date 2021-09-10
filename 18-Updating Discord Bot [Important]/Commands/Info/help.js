@@ -45,7 +45,7 @@ module.exports = {
             });
             
             const embed = new MessageEmbed()
-                .setTitle(`${client.user.name} Commands`)
+                .setTitle(`${client.user} Commands`)
                 .setDescription(`\`\`\`js\n"Prefix": <${prefix}> || "Default Prefix": <!>\n"Syntex": <${prefix}help command_name>\`\`\``)
                 .addFields(categories)
                 .setFooter(
