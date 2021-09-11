@@ -45,7 +45,7 @@ module.exports = {
             });
             
             const embed = new MessageEmbed()
-                .setTitle(`${client.user} Commands`)
+                .setTitle(`Bot Commands`)
                 .setDescription(`\`\`\`js\n"Prefix": <${prefix}> || "Default Prefix": <!>\n"Syntex": <${prefix}help command_name>\`\`\``)
                 .addFields(categories)
                 .setFooter(
@@ -144,14 +144,14 @@ module.exports = {
         } else {
             let catts = [];
 
-            readdirSync("./commands/").forEach((dir) => {
+            readdirSync("./Commands/").forEach((dir) => {
                 if (dir.toLowerCase() !== args[0].toLowerCase()) return;
-                const commands = readdirSync(`./commands/${dir}/`).filter((file) =>
+                const commands = readdirSync(`./Commands/${dir}/`).filter((file) =>
                     file.endsWith(".js")
                 );
                     
                 const cmds = commands.map((command) => {
-                    let file = require(`../../commands/${dir}/${command}`);
+                    let file = require(`../../Commands/${dir}/${command}`);
                     if (!file.name) return "No command name.";
                     let name = file.name.replace(".js", "");
                     if (client.commands.get(name).hidden) return;
