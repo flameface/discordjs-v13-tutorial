@@ -3,6 +3,7 @@ const { MessageEmbed } = require("discord.js")
 module.exports = {
     name: 'autorole-check',
     aliases: ["arc"],
+    description: "checks current autorole",
     run: async(client, message, args, prefix) => {
         if(!message.content.startsWith(prefix)) return;
         try{
