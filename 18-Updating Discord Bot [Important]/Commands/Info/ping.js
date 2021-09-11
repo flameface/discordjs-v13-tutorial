@@ -2,7 +2,7 @@ const { MessageEmbed } = require('discord.js');
 module.exports = {
       name: 'ping',
       usage: 'ping',
-      description: `Gets Bot\'s current latency and API latency.`,
+      description: "Gets Bot\'s current latency and API latency.",
       run: async(client, message, prefix) => {
         if(!message.content.startsWith(prefix)) return;
               try {
