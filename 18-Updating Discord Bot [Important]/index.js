@@ -1,6 +1,3 @@
-//CLEAN CONSOLE
-console.clear();
-
 const { Collection, Client } = require('discord.js');
 const config = require('./config.json');
 const fs = require('fs');
