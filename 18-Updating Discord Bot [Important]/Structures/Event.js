@@ -1,16 +1,21 @@
 const {readdirSync} = require('fs');
+const ascii = require('ascii-table');
+let table = new ascii("Events");
+table.setHeading('Events', ' Load status');
 
 module.exports = (client) => {
-  readdirSync("./Events/").forEach((file) => {
-    const events = readdirSync("./Events/").filter((file) => file.endsWith(".js"));
+  client.logger.ready("=-=-=-=-=-=-=- Loading event(s) -=-=-=-=-=-=-=");
+  readdirSync('./Events/').forEach(dir => {
+    const events = readdirSync(`./Events/${dir}/`).filter(file => file.endsWith('.js'));
     for(let file of events) {
-      let pull = require(`../Events/${file}`);
+      let pull = require(`../Events/${dir}/${file}`);
       if(pull.name){
         client.events.set(pull.name, pull);
-      } else {
-        continue;
+            } else {
+                table.addRow(file, '✔️ -> Event Loaded')
+                continue;
       }
     }
   });
-  client.logger.log("=-=-=-=-=-=-=- Loading event(s) -=-=-=-=-=-=-=");
+    console.log(table.toString());
 };
