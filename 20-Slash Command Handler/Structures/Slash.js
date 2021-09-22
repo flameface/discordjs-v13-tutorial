@@ -5,7 +5,7 @@ const globPromise = promisify(glob);
 const { readdirSync } = require("fs");
 const ascii = require("ascii-table");
 let table = new ascii("Slash commands");
-module.exports = (client) => {
+module.exports = async(client) => {
     client.logger.ready("=-=-=-=-=-=-=- Loading slash command(s) -=-=-=-=-=-=-=");
     readdirSync("./SlashCommands/").forEach(dir => {
     const commands = await globPromise(
