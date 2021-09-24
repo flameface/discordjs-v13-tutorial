@@ -7,7 +7,7 @@ client.on("interactionCreate", async(interaction) => {
     })).catch(() => {});
 
 
-    const cmd = client.slashCommands.get(interaction.commandName);
+    const cmd = client.slash.get(interaction.commandName);
     if (!cmd)
       return interaction.followUp({
         content: "An error has occured "
