@@ -20,6 +20,6 @@ module.exports = (client) => {
     });
     console.log(table.toString());
 client.on("ready",async ()=> {
-    await clent.guilds.cache.get('guild-id').commands.set(slash);
+    await client.guilds.cache.get('guild-id').commands.set(slash);
  })
 }
