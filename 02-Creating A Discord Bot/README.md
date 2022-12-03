@@ -1,1 +1,0 @@
-![1](https://i.ytimg.com/vi/6rRmbEGZm1w/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD7R_lldbmXpDnWquCgku1BvrYvFQ)

@@ -1,1 +1,0 @@
-![1](https://i.ytimg.com/an_webp/_8WsxrqiOM4/mqdefault_6s.webp?du=3000&sqp=CNz4rJwG&rs=AOn4CLAfyi35ZhgMvwseyHyr4EdGrTMDBQ)

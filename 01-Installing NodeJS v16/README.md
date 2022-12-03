@@ -1,5 +1,3 @@
-![1](https://i.ytimg.com/vi/0Etpm5OFwCU/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDSlNu2x77K7F1tdxd13nja214WUA)
-
 <h1 align='center'> DISCORDJS v13 EPISODES BY FLAMEQUARD </h1> 
 
 # If You Haven't Subscribe Us Please Its Our Request, Subscribe Us
