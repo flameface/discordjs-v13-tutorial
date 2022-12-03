@@ -1,7 +1,17 @@
-const { Discord, Client, Collection, MessageEmbed, Intents } = require('discord.js');
-const client = new Client({ intents: ['GUILDS', 'GUILD_MEMBERS', 'GUILD_MESSAGES', 'GUILD_INVITES']});
-const config = require('./config.json');
+const { Client } = require('discord.js');
+const { TOKEN } = require('./config.json');
+
+const client = new Client({
+  intents: [
+    'GUILDS',
+    'GUILD_MEMBERS',
+    'GUILD_MESSAGES',
+    'GUILD_INVITES'
+  ]
+});
+
 client.on('ready', () => {
   console.log(`${client.user.tag} is ready`)
 })
-client.login(config.token)
+
+client.login(TOKEN)

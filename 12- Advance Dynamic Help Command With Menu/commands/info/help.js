@@ -1,5 +1,3 @@
-//Because Of Big File We Cant Record This So We Have Previded Source Code
-
 const { MessageEmbed, Message, Client } = require("discord.js");
 const { readdirSync } = require("fs");
 const { stripIndent } = require('common-tags');
@@ -11,7 +9,6 @@ module.exports = {
     aliases: [`h`],
     description: "Shows all available bot commands",
     run: async (client, message, args, prefix) => {
-        if(!message.content.startsWith(prefix)) return;
         let categories = [];
         let cots = [];
 
@@ -48,7 +45,7 @@ module.exports = {
                 categories.push(cats);
                 ccate.push(nome);
             });
-            
+
             const description = stripIndent`
             Current Server Prefix Is ${prefix} 
             Use The Drop Down Menu Or Follow The Given Commands
@@ -139,7 +136,7 @@ module.exports = {
 
                         await interaction.deferUpdate();
 
-                        return interaction.message.edit({ embeds: [combed], components: menus.smenu})
+                        return interaction.message.edit({ embeds: [combed], components: menus.smenu })
                     };
                 };
                 const filter = (interaction) => {
@@ -163,7 +160,7 @@ module.exports = {
                 const commands = readdirSync(`./commands/${dir}/`).filter((file) =>
                     file.endsWith(".js")
                 );
-                    
+
                 const cmds = commands.map((command) => {
                     let file = require(`../../commands/${dir}/${command}`);
                     if (!file.name) return "No command name.";
@@ -228,20 +225,20 @@ module.exports = {
                 .addField(
                     "Aliases:",
                     command.aliases ?
-                    `\`${command.aliases.join("` `")}\`` :
-                    "No aliases for this command."
+                        `\`${command.aliases.join("` `")}\`` :
+                        "No aliases for this command."
                 )
                 .addField(
                     "Usage:",
                     command.usage ?
-                    `\`${prefix}${command.name} ${command.usage}\`` :
-                    `\`${prefix}${command.name}\``
+                        `\`${prefix}${command.name} ${command.usage}\`` :
+                        `\`${prefix}${command.name}\``
                 )
                 .addField(
                     "Command Description:",
                     command.description ?
-                    command.description :
-                    "No description for this command."
+                        command.description :
+                        "No description for this command."
                 )
                 .setFooter(
                     `Requested by ${message.author.tag}`,

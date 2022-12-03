@@ -3,6 +3,7 @@ const { readdirSync } = require("fs");
 const ascii = require("ascii-table");
 let table = new ascii("Slash Commands");
 table.setHeading('Slash Command', ' Load status');
+
 module.exports = (client) => {
     readdirSync("./SlashCommands/").forEach(dir => {
         const commands = readdirSync(`./SlashCommands/${dir}/`).filter(file => file.endsWith(".js"));
@@ -15,11 +16,11 @@ module.exports = (client) => {
             } else {
                 table.addRow(file, `❌  -> missing a help.name, or help.name is not a string.`);
                 continue;
-             }
-          }
+            }
+        }
     });
     console.log(table.toString());
-client.on("ready",async ()=> {
-    await client.guilds.cache.get('guild-id').commands.set(slash);
- })
+    client.on("ready", async () => {
+        await client.guilds.cache.get('guild-id').commands.set(slash);
+    })
 }

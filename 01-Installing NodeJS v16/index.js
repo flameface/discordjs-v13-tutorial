@@ -1,3 +1,5 @@
 console.log("READY")
 
-//Watch Episode 1 Properly
+/**
+ * -> Watch The DiscordJS-v13-Series Episode 1 To Setup NodeJS v16 
+ */

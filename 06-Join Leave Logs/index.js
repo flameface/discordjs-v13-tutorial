@@ -1,6 +1,9 @@
-const {Collection, Client, Discord} = require('discord.js')
-const config = require('./config.json');
+const { Collection, Client } = require('discord.js');
+
+const { TOKEN } = require('./config.json');
+
 const fs = require('fs');
+
 const client = new Client({
     intents: [
         "GUILDS",
@@ -20,18 +23,18 @@ const client = new Client({
     ],
 });
 
-module.exports = client;
-
 client.commands = new Collection();
 client.aliases = new Collection();
 client.categories = fs.readdirSync("./commands/");
+
+module.exports = client;
 
 ["command", "event"].forEach(handler => {
     require(`./handlers/${handler}`)(client);
 });
 
 client.once('ready', () => {
-  console.log(`${client.user.tag} is ready`)
+    console.log(`${client.user.tag} is ready`)
 })
 
-client.login(config.token)
+client.login(TOKEN)

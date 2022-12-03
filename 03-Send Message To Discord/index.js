@@ -1,19 +1,27 @@
-const { Discord, Client, Collection, MessageEmbed, Intents } = require('discord.js');
-const client = new Client({ intents: ['GUILDS', 'GUILD_MEMBERS', 'GUILD_MESSAGES', 'GUILD_INVITES']});
-const config = require('./config.json');
+const { Client } = require('discord.js');
+const { TOKEN, PREFIX } = require('./config.json');
+
+const client = new Client({
+  intents: [
+    'GUILDS',
+    'GUILD_MEMBERS',
+    'GUILD_MESSAGES',
+    'GUILD_INVITES'
+  ]
+});
 
 client.once('ready', () => {
   console.log(`${client.user.tag} is ready`)
 })
 
 client.on('messageCreate', message => {
-  if(message.content === "!youtube") {
+  if (message.content === `${PREFIX}youtube`) {
     message.channel.send("https://instagram.com/flamequard Subscribe")
-  } else if(message.content === "!instagram") {
+  } else if (message.content === `${PREFIX}instagram`) {
     message.channel.send("https://instagram.com/flamequard Follow")
-  } else if(message.content == "!discord" {
+  } else if (message.content == `${PREFIX}discord`) {
     message.channel.send("https://discord.gg/TvjrWtEuyP Join")
-  }  
+  }
 })
 
-client.login(process.config.token)
+client.login(TOKEN);

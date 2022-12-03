@@ -1,7 +1,7 @@
 const client = require("../index.js");
 const activities = [
-{ name: 'Youtube.com/FlameQuard', type: 'STREAMING' }, 
-{ name: 'Users', type: 'LISTENING' }
+    { name: 'Youtube.com/FlameQuard', type: 'STREAMING' },
+    { name: 'Users', type: 'LISTENING' }
 ];
 client.on('ready', () => {
     console.log(`${client.user.username} has logged in`);
@@ -14,4 +14,4 @@ client.on('ready', () => {
         client.user.setActivity(activities[activity]);
         activity++;
     }, 5000);
-})
+});

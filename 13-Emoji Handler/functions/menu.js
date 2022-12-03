@@ -8,12 +8,7 @@ const create_mh = (array) => {
     let select_menu;
     let id = `help-menus`;
     let menus = [];
-    const emo = {
-        info: emojis.emojiname,
-        utility: emojis.emojiname2,
-        moderation: emojis.emojiname3,
-    }
-    
+
     array.forEach(cca => {
         let name = cca;
         let sName = `${name.toUpperCase()}`

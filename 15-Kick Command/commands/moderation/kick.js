@@ -1,14 +1,13 @@
 const { MessageEmbed, Permissions } = require("discord.js");
 
 module.exports = {
-        name: "kick",
-        category: "moderation",
-        description: "Kicks the user",
-        accessableby: "Administrator",
-        usage: "[name | nickname | mention | ID] <reason> (optional)",
-        aliases: ["k"],
-        run: async (client, message, args) => {
-        if(!message.content.startsWith(prefix)) return;
+    name: "kick",
+    category: "moderation",
+    description: "Kicks the user",
+    accessableby: "Administrator",
+    usage: "[name | nickname | mention | ID] <reason> (optional)",
+    aliases: ["k"],
+    run: async (client, message, args) => {
         try {
             if (!message.member.permissions.has(Permissions.FLAGS.KICK_MEMBERS)) return message.channel.send("**You Do Not Have Permissions To Kick Members! - [KICK_MEMBERS]**");
             if (!message.guild.me.permissions.has(Permissions.FLAGS.KICK_MEMBERS)) return message.channel.send("**I Do Not Have Permissions To Kick Members! - [KICK_MEMBERS]**");
@@ -35,17 +34,17 @@ module.exports = {
                 kickMember.kick()
             }
             if (reason) {
-            const embed2 = new MessageEmbed()
-                .setColor("GREEN")
-                .setAuthor(message.guild.name, message.guild.iconURL())
-                .setDescription(`**${kickMember.user.username}** Has Been Kicked For ${reason}`)
-            message.channel.send({ embeds: [embed2] });
+                const embed2 = new MessageEmbed()
+                    .setColor("GREEN")
+                    .setAuthor(message.guild.name, message.guild.iconURL())
+                    .setDescription(`**${kickMember.user.username}** Has Been Kicked For ${reason}`)
+                message.channel.send({ embeds: [embed2] });
             } else {
                 const embed3 = new MessageEmbed()
-                .setColor("GREEN")
-                .setAuthor(message.guild.name, message.guild.iconURL())
-                .setDescription(`**${kickMember.user.username}** Has Been Kicked For No Reason`)
-            message.channel.send({ embeds: [embed3] });
+                    .setColor("GREEN")
+                    .setAuthor(message.guild.name, message.guild.iconURL())
+                    .setDescription(`**${kickMember.user.username}** Has Been Kicked For No Reason`)
+                message.channel.send({ embeds: [embed3] });
             }
         } catch (e) {
             return message.channel.send(`**${e.message}**`)
